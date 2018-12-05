@@ -50,7 +50,7 @@
             android:layout_marginBottom="24dp"
             android:text="No account yet? Create one"
             android:gravity="center"
-            android:textSize="16dp"
+            android:textSize="24dp"
             android:textColor="@android:color/black"/>
     </LinearLayout>
 

@@ -21,7 +21,7 @@ public class RegActivity extends AppCompatActivity implements View.OnClickListen
 
 
 
-        spinner = (Spinner)findViewById(R.id.Adminspinner);
+
         etmail=(EditText)findViewById(R.id.email);
         etpass=(EditText)findViewById(R.id.password);
         etname=(EditText)findViewById(R.id.input_name);

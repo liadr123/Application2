@@ -41,15 +41,6 @@
                 android:hint="Password"/>
 
 
-
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Adminspinner"
-
-        />
-
-
         <!-- Signup Button -->
         <Button style="@style/Widget.AppCompat.Button.Colored"
 
@@ -69,12 +60,8 @@
             android:layout_marginBottom="24dp"
             android:text="Already a member? Login"
             android:gravity="center"
-            android:textSize="16dip"/>
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </Spinner>
+            android:textSize="20sp"
+            android:textColor="@android:color/black"/>
 
     </LinearLayout>
 </ScrollView>
