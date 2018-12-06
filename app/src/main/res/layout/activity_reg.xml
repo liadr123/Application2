@@ -42,7 +42,7 @@
 
 
         <!-- Signup Button -->
-        <Button style="@style/Widget.AppCompat.Button.Colored"
+        <Button
 
             android:id="@+id/Regbtn"
             android:layout_width="fill_parent"

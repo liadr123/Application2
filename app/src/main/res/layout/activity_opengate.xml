@@ -20,8 +20,11 @@
 
         <Spinner
             android:layout_width="335dp"
-            android:layout_height="41dp"></Spinner>
-        <Button style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_height="41dp">
+
+        </Spinner>
+
+        <Button
 
             android:id="@+id/btn_open"
             android:layout_width="fill_parent"

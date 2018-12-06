@@ -33,7 +33,7 @@
             android:hint="Password"
             android:textColor="@android:color/black"/>
 
-        <Button style="@style/Widget.AppCompat.Button.Colored"
+        <Button
 
             android:id="@+id/btn_login"
             android:layout_width="fill_parent"
