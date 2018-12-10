@@ -16,9 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegActivity" />
         <activity android:name=".Opengate" />
-        <activity android:name=".Entertobuilding"></activity>
+        <activity android:name=".Entertobuilding" />
+        <activity android:name=".Regis"></activity>
     </application>
 
 </manifest>
