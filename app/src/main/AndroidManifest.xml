@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".Opengate" />
         <activity android:name=".Entertobuilding" />
-        <activity android:name=".Regis"></activity>
+        <activity android:name=".Regis" />
+        <activity android:name=".login"></activity>
     </application>
 
 </manifest>
