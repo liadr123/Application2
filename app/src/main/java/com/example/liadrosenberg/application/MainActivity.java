@@ -1,6 +1,7 @@
 package com.example.liadrosenberg.application;
 
 import android.content.Intent;
+import android.nfc.Tag;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -38,32 +39,44 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      tvsignup=(TextView)findViewById(R.id.link_signup);
 
      tvsignup.setOnClickListener(this);
-        final String TAG="Tag";
+     btnreg.setOnClickListener(this);
+
         mAuth = FirebaseAuth.getInstance();
-        mAuth.createUserWithEmailAndPassword("naadhdavb@gmail.com","sonofa")
+
+
+
+    }
+
+    public   void  Register()
+    {
+        mAuth.createUserWithEmailAndPassword(edmail.getText().toString(),edpass.getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
+                    public void onComplete(Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "createUserWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            Toast.makeText(MainActivity.this,"Authentication succsesd",Toast.LENGTH_SHORT).show();
-                          //  updateUI(user);
+                           ;
+                            Toast.makeText(MainActivity.this,"Registered successfully",Toast.LENGTH_SHORT).show();
+                            ToLogin();
+
                         } else {
                             // If sign in fails, display a message to the user.
-                            Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                            Toast.makeText(MainActivity.this, "Authentication failed.",
+
+                            Toast.makeText(MainActivity.this, "Register failed.",
                                     Toast.LENGTH_SHORT).show();
-                           // updateUI(null);
+
                         }
 
                         // ...
                     }
                 });
-
     }
 
+   public void ToLogin()
+   {
+       Intent intent= new Intent(this,login.class);   //move to login screen
+       startActivity(intent);
+   }
     @Override
     public void onStart() {
         super.onStart();
@@ -75,7 +88,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Intent intent=new Intent(this,login.class);
-        startActivity(intent);
+        if(v==tvsignup) {
+            Intent intent = new Intent(this, login.class);  //if user already registered-move him to login screen
+            startActivity(intent);
+        }
+        if (v==btnreg)
+        {
+            Register();
+        }
     }
 }
