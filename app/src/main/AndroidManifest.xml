@@ -19,7 +19,8 @@
         <activity android:name=".Opengate" />
         <activity android:name=".Entertobuilding" />
         <activity android:name=".Regis" />
-        <activity android:name=".login"></activity>
+        <activity android:name=".login" />
+        <activity android:name=".Addgate"></activity>
     </application>
 
 </manifest>
